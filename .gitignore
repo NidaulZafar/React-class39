@@ -7,3 +7,9 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+practice/w1/prepexercise/package-lock.json
+.gitignore
+practice/w1/prepexercise/public/manifest.json
+.gitignore
+practice/w1/prepexercise/public/robots.txt
+practice/w1/prepexercise/package.json

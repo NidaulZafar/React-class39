@@ -8,7 +8,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.gitignore
 practice/w1/prepexercise/public/manifest.json
-.gitignore
 practice/w1/prepexercise/public/robots.txt

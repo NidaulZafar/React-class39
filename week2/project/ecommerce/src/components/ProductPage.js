@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import FetchData from './FetchData';
-import loading from './loading.gif';
+import useFetch from '../hooks/useFetch';
+import loading from '../assets/loading.gif';
 
 
 const ProductPage = () => {
     const [prodDetails, setProdDetails] = useState({});
     const params = useParams();
     const url = `https://fakestoreapi.com/products/${params.id}`;
-    const { error, isLoading } = FetchData(url, setProdDetails);
+    const { error, isLoading } = useFetch(url, setProdDetails);
     return (
         <>
             {

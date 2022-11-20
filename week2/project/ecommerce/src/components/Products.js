@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ProductSingle from './ProductSingle';
-import FetchData from './FetchData';
-import loading from './loading.gif';
+import useFetch from '../hooks/useFetch';
+import loading from '../assets//loading.gif';
 
 const Products = ({ category }) => {
     const [products, setProducts] = useState([]);
@@ -11,7 +11,7 @@ const Products = ({ category }) => {
     } else {
         url = `https://fakestoreapi.com/products/category/${category}`;
     }
-    const { error, isLoading } = FetchData(url, setProducts);
+    const { error, isLoading } = useFetch(url, setProducts);
     return (
         <>
             {isLoading ? <img src={loading} alt='Loading...' />

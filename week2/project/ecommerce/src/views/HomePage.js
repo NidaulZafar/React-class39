@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Header from './Header';
-import Nav from './Nav';
-import Products from './Products';
+import Header from '../views/Header';
+import Nav from '../components/Nav';
+import Products from '../components/Products';
 
 const HomePage = () => {
     const [selectedCategory, setSelectedCategory] = useState('');

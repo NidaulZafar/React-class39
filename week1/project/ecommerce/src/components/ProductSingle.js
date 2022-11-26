@@ -1,11 +1,12 @@
 import React from 'react';
 
-const ProductSingle = (props) => {
+const ProductSingle = ({ product }) => {
+    const { id, image, title } = product;
     return (
-        <li className='product-item' key={props.product.id}>
+        <li className='product-item' key={id}>
             <div className='product'>
-                <img className='product-image' src={props.product.image} alt='product' />
-                <span className='product-title'>{props.product.title}</span>
+                <img className='product-image' src={image} alt='product' />
+                <span className='product-title'>{title}</span>
             </div>
         </li>
     );

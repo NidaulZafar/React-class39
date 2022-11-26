@@ -5,12 +5,12 @@ import CategoryButton from './CategoryButton';
 import Products from './Products';
 
 const Categories = () => {
-    const [productsList, setProductsList] = useState(() => { return allProducts });
+    const [productsList, setProductsList] = useState(allProducts);
     const [selected, setSelected] = useState(() => { return '' });
     const sortProductsByCategory = e => {
         if (e.target.id === selected) {
             setProductsList(allProducts);
-            setSelected(() => {});
+            setSelected({});
         } else {
             const selectedCategoryId = e.target.id;
             setSelected(selectedCategoryId);

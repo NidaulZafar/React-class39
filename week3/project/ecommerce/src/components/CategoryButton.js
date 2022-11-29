@@ -1,14 +1,14 @@
 import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 
-const CategoryButton = ({ selectedCategory }) => {
-    const { category, index, selected, clickHandler } = selectedCategory;
+const CategoryButton = ({ category }) => {
+    const categoryParams = useParams();
+    
     return (
-        <button
-            key={category}
-            id={index}
-            className={+selected === index ? `categories-item categories-item-selected` : "categories-item"} onClick={clickHandler}>
+        <Link id={category} to={`/${category}`} key={category} className={categoryParams.category === category ? categoryParams.category !== undefined ? `categories-item categories-item-selected` : `categories-item` : `categories-item` }
+        >
             {category}
-        </button>
+        </Link>
     );
 }
 

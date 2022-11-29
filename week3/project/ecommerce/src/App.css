@@ -1,5 +1,49 @@
 .App {
-  margin: 8px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.app-title {
+  margin-right: auto;
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.title-container--title {
+  margin-right: auto;
+}
+
+.nav {
+  margin-left: 8px;
+}
+
+.nav-link {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.product-image--container {
+  position: relative;
+}
+
+.product-image--favourite-container {
+  background-color: #fff;
+  cursor: pointer;
+  height: 20px;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 20px;
+}
+
+.product-image--favourite {
+  color: red;
+}
+
+.title-container--title {
+  margin-right: auto;
 }
 
 button {
@@ -41,6 +85,9 @@ button {
   margin: 8px;
 }
 
+li {
+  list-style-type: none;
+}
 
 .product {
   display: flex;

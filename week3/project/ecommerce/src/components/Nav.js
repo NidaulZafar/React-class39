@@ -3,18 +3,10 @@ import useFetch from '../hooks/useFetch';
 import CategoryButton from './CategoryButton';
 import loading from '../assets/loading.svg';
 
-const Nav = ({ setCategory }) => {
+const Nav = () => {
     const [categories, setCategories] = useState([]);
-    const [selected, setSelected] = useState(undefined);
-    let url = `https://fakestoreapi.com/products/categories`;
+    const url = `https://fakestoreapi.com/products/categories`;
     const { error, isLoading } = useFetch(url, setCategories);
-
-    const getSelectedCategory = e => {
-        const selectedCategory = e.target.innerText;
-        const selectedId = e.target.id;
-        setCategory(selectedCategory);
-        setSelected(selectedId);
-    }
 
     return (
         <div className='categories'>
@@ -23,14 +15,7 @@ const Nav = ({ setCategory }) => {
                     {categories.map((category, index) => {
                         return (
                             <CategoryButton
-                                key={index}
-                                selectedCategory={{
-                                index,
-                                category,
-                                clickHandler: getSelectedCategory,
-                                    selected,
-                                }}
-                            />
+                                key={index} category={category}/>
                         );
                     })}
                 </>

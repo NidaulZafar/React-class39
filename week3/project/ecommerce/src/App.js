@@ -7,15 +7,24 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import { FavsProvider } from './components/FavsContext';
+import Favorites from './components/Favorites';
+import Products from './components/Products';
+
 
 function App() {
   return (
+    <FavsProvider>
     <Router>
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='product/:id' element={<ProductPage />} replace />
+          <Route path='/' element={<HomePage />}>
+            <Route path=':category' element={<Products />} />
+          </Route>          
+          <Route path='product/:id' element={<ProductPage />} replace />
+          <Route path='favorites' element={<Favorites/>} />
       </Routes>
     </Router>
+    </FavsProvider>
   );
 }
 

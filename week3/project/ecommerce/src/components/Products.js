@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import ProductSingle from './ProductSingle';
 import useFetch from '../hooks/useFetch';
 import loading from '../assets//loading.svg';
+import { useParams } from 'react-router-dom';
 
-const Products = ({ category }) => {
+const Products = () => {
     const [products, setProducts] = useState([]);
-    const url = category === '' ? `https://fakestoreapi.com/products` : `https://fakestoreapi.com/products/category/${category}`;
+    const { category } = useParams();
+    const url = category === undefined ? `https://fakestoreapi.com/products` : `https://fakestoreapi.com/products/category/${category}`;
     const { error, isLoading } = useFetch(url, setProducts);
     return (
         <>

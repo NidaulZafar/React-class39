@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ProductSingle from './ProductSingle';
 import useFetch from '../hooks/useFetch';
-import loading from '../assets//loading.svg';
+import loading from '../../assets/loading.svg';
 import { useParams } from 'react-router-dom';
 
 const Products = () => {

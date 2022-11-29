@@ -1,6 +1,6 @@
 import React from "react";
-import regHeart from '../assets/heart-regular.svg';
-import solidHeart from '../assets/heart-solid.svg';
+import regHeart from '../../assets/heart-regular.svg';
+import solidHeart from '../../assets/heart-solid.svg';
 import {useFavs} from './FavsContext';
 
 const FavIcon = ({ productID }) => {

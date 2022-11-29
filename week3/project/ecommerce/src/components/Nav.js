@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import useFetch from '../hooks/useFetch';
+import useFetch from './hooks/useFetch';
 import CategoryButton from './CategoryButton';
 import loading from '../assets/loading.svg';
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
-import loading from '../assets/loading.svg';
-import FavIcon from './FavoriteIcon';
+import loading from '../../assets/loading.svg';
+import FavIcon from '../Favorites/FavoriteIcon';
 
 
 

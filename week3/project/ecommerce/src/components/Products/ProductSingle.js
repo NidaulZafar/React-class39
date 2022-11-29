@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import FavIcon from './FavoriteIcon';
+import FavIcon from '../Favorites/FavoriteIcon';
 
 const ProductSingle = ({ product }) => {
     const path = `/product/${product.id}`;
@@ -10,8 +10,8 @@ const ProductSingle = ({ product }) => {
             <NavLink to={path}>
                 <div className='product'>
                 <div className='product-image--container'>
-                <img className='product-image' src={product.image} alt='product' />
                         <FavIcon productID={product.id} />
+                <img className='product-image' src={product.image} alt='product' />
                         </div>
                 <span className='product-title'>{product.title}</span>
                 </div>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useFavs } from "./FavsContext";
 import useFetch from "../hooks/useFetch";
-import Header from "../views/Header";
-import ProductSingle from "./ProductSingle";
-import loading from '../assets/loading.svg';
+import Header from "../../views/Header";
+import ProductSingle from "../Products/ProductSingle";
+import loading from '../../assets/loading.svg';
 
 const Favorites = () => {
     const [products, setProducts] = useState([]);

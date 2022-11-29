@@ -26,7 +26,7 @@ const Categories = () => {
                     return (
                         <CategoryButton
                             key={index}
-                            selectedCategory={{
+                            props={{
                                 index,
                                 category,
                                 clickHandler: sortProductsByCategory,

@@ -1,12 +1,13 @@
 import React from 'react';
 
-const CategoryButton = ({selectedCategory}) => {
+const CategoryButton = ({ props }) => {
+    const { category, index, selected, clickHandler } = props;
     return (
         <button
-            key={selectedCategory.category}
-            id={selectedCategory.index}
-            className={+selectedCategory.selected === selectedCategory.index ? `categories-item categories-item-selected` : "categories-item"} onClick={selectedCategory.clickHandler}>
-            {selectedCategory.category}
+            key={category}
+            id={index}
+            className={+selected === index ? `categories-item categories-item-selected` : "categories-item"} onClick={clickHandler}>
+            {category}
         </button>
     );
 }

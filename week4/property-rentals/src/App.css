@@ -94,13 +94,13 @@ span p {
 
 .outer-container {
     background-color: #ffffff;
-    border: 2px solid black;
     margin: 10px;
-    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .property-container {
-    border: 2px solid red;
     width: 500px;
     height: 300px;
     background-repeat: no-repeat;
@@ -121,11 +121,10 @@ span p {
 
 .lower-div {
     display: flex;
-    justify-content: space-between;
-    justify-content: center;
     align-items: center;
-    border: 2px solid green;
-    height: 100px;
+    margin: 20px;
+    justify-content: space-around;
+
 }
 
 

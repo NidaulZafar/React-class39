@@ -15,7 +15,7 @@ return (
 		<Bars />
 		<NavMenu>
 		<NavLink to='/'>
-					<FontAwesomeIcon icon={faPeopleRoof} style={{color: 'white', fontSize: '50px'}} />
+					<FontAwesomeIcon icon={faPeopleRoof} style={{color: 'orange', fontSize: '50px'}} />
 		</NavLink>
 		<NavLink to='/about'>
 			About

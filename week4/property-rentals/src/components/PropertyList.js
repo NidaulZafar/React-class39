@@ -52,19 +52,21 @@ const PropertyList = () => {
                                         </div>
                                       <div className='lower-div'>
                                           <div className='max-users'>
-                                          <FontAwesomeIcon icon={faUsers} style={{ color: 'gray', fontSize: '30px' }} /><span>X {rental.maxGuests}</span>
+                                          <FontAwesomeIcon icon={faUsers} style={{ color: 'gray', fontSize: '15px' }} /><span> {rental.maxGuests}</span>
                                           </div>
                                           <div className='bathrooms'>
-                                              <FontAwesomeIcon icon={faToilet} style={{ color: 'gray', fontSize: '30px' }} /><span>X {rental.bathrooms}</span>
+                                              <FontAwesomeIcon icon={faToilet} style={{ color: 'gray', fontSize: '15px' }} /><span> {rental.bathrooms}</span>
                                           </div>
                                               <div className='nightly-price'>
                                                   <h4>&#x20AC;{rental.nightly_price} / night</h4>
                                                   </div>
-                                          {favoritesChecker(rental.id) ? 
-        <button onClick={() => removeFromFavorites(rental.id)}>Unlike</button>
+                                          </div>
+                                      {favoritesChecker(rental.id) ? 
+                                          <button onClick={() => removeFromFavorites(rental.id)}>
+                                              Unlike
+                                          </button>
                                               : <button onClick={() => addToFavorites(rental)}>Like</button>
                                           }
-                                          </div>
                           </div>
                                   </>
                           ))}

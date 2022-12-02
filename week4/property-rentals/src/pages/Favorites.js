@@ -43,7 +43,7 @@ return (
 								: <button onClick={() => addToFavorites(rental)}>Like</button>
 							}
 				</div>
-                          )) : <h1>Nothing yet!</h1>}
+                          )) : <h1>Nothing yet! Browse our collection of rentals and save what you like.</h1>}
 	</div>
 						  </>
 );

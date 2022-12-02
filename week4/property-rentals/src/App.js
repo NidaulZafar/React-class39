@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound';
 // import Footer from './components/Footer/Footer';
 import PropertyDetails from './components/PropertyDetails';
 import PropertyList from './components/PropertyList';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
 

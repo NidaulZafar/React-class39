@@ -17,13 +17,13 @@ return (
 		<NavLink to='/'>
 					<FontAwesomeIcon icon={faPeopleRoof} style={{color: 'orange', fontSize: '50px'}} />
 		</NavLink>
-		<NavLink to='/about'>
+		<NavLink to='/about' className='nav-item' >
 			About
 		</NavLink>
-		<NavLink to='/favorites'>
+		<NavLink to='/favorites' className='nav-item'>
 			Favorites
 		</NavLink>
-		<NavLink to='/contact'>
+		<NavLink to='/contact' className='nav-item'>
 			Contact
 		</NavLink>
 		</NavMenu>

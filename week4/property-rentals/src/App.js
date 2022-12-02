@@ -23,8 +23,6 @@ return (
 			<Route path='/properties/:id' element={<PropertyDetails />} />
 			<Route path='/about' element={<About />} />
 			<Route path='categories/:id' element={<PropertyList />} />
-			{/* <Route path='categories/:' element={<PropertyList />} />
-			<Route path='categories/3' element={<PropertyList />} /> */}
 			<Route path='/favorites' element={<Favorites />} />
 			<Route path='/contact' element={<Contact />} />
 			<Route path='*' element={<NotFound />} />

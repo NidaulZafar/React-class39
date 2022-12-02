@@ -22,16 +22,22 @@ const PropertyDetails = () => {
 
     
   return (
-      <div>
+      <div className='property-details--main'>
           <h2>Property Details</h2>
             {isLoading ? <img src={loading} alt='Loading...' />
                 : error ? <h2>{error}</h2>
                   : <>
+                  <div className='property-details--outer-container'>
+                      <div className='property-details-container' style={{ backgroundImage: `url(${rental.image_url})` }}>
+                      </div>
+                      <div className="property-details">
                       <h2>{rental.name}</h2>
-                      <img src={rental.image_url} alt='rental' />
                       <h4>&#x20AC;{rental.nightly_price} / night</h4>
                       <h3>Max Guests</h3>
-                      <h4>{rental.maxGuests}</h4>
+                          <h4>{rental.maxGuests}</h4>
+                          </div>
+                          </div>
+                      <div className="property-details-lower-div">
                       <h3>Description</h3>
                       <p>{rental.description}</p>
                       <div>
@@ -41,8 +47,9 @@ const PropertyDetails = () => {
                                   
                                 }
                                       
-                                  </div>
-                </>
+                          </div>
+                      </div>
+                      </>
             }
       </div>
   )

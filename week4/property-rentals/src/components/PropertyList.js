@@ -46,8 +46,8 @@ const PropertyList = () => {
                               <>
                           <div className='outer-container'>
                               <div className="property-container" key={rental.id} style={{ backgroundImage: `url(${rental.image_url})` }}>
-                                  <h2 className='property-title'>{rental.name}</h2>
                                       <div className='overlay' onClick={() => navigate(`/properties/${rental.id}`)}></div>
+                                  <h2 className='property-title'>{rental.name}</h2>
                                   
                                         </div>
                                       <div className='lower-div'>

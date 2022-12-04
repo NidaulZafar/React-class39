@@ -11,7 +11,6 @@ import { faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
 return (
-	<>
 	<Nav>
 		<NavMenu>
 		<NavLink to='/'>
@@ -28,7 +27,6 @@ return (
 		</NavLink>
 		</NavMenu>
 	</Nav>
-	</>
 );
 };
 

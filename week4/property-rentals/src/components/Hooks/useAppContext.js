@@ -10,8 +10,6 @@ export const useAppContext = () => {
     return context;
 }
 
-
-
 const AppContextProvider = ({ children }) => {
     const [favorites, setFavorites] = useState([]);
 

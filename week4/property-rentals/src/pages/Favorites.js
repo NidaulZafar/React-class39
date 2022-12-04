@@ -15,14 +15,15 @@ const Favorites = () => {
         return boolean;
     }
 return (
-	<>
-		<h1>Favorites</h1>
+	<div className='property-list-main'>
 	<div className='properties'>
 		{favorites.length > 0 ? favorites.map((rental) => (
 			<div className='outer-container'>
 				<div className="property-container" key={rental.id} style={{ backgroundImage: `url(${rental.image_url})` }}>
+					<div className='overlay' onClick={() => navigate(`/properties/${rental.id}`)}>
+						
 					<h2 className='property-title'>{rental.name}</h2>
-						<div className='overlay' onClick={() => navigate(`/properties/${rental.id}`)}></div>
+						</div>
 					
 						  </div>
 						<div className='lower-div'>
@@ -37,15 +38,15 @@ return (
 									</div>
 							</div>
 						{favoritesChecker(rental.id) ? 
-							<button onClick={() => removeFromFavorites(rental.id)}>
+							<button className='button' onClick={() => removeFromFavorites(rental.id)}>
 								Unlike
 							</button>
-								: <button onClick={() => addToFavorites(rental)}>Like</button>
+								: <button className='button' onClick={() => addToFavorites(rental)}>Like</button>
 							}
 				</div>
-                          )) : <h1>Nothing yet! Browse our collection of rentals and save what you like.</h1>}
+                          )) : <h3 className='no-favorites'>Nothing yet! Browse our collection of rentals and save what you like.</h3>}
 	</div>
-						  </>
+						  </div>
 );
 };
 

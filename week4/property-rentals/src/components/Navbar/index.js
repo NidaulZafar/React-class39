@@ -1,18 +1,18 @@
 import React from 'react';
 import {
-Nav,
-NavLink,
-Bars,
-NavMenu,
-} from './NavbarElements';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPeopleRoof } from '@fortawesome/free-solid-svg-icons'
+	Nav,
+	NavLink,
+	NavMenu,
+}
+from './NavbarElements';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
+
 
 const Navbar = () => {
 return (
 	<>
 	<Nav>
-		<Bars />
 		<NavMenu>
 		<NavLink to='/'>
 					<FontAwesomeIcon icon={faPeopleRoof} style={{color: 'orange', fontSize: '50px'}} />

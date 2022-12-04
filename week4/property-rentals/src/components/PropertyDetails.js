@@ -23,7 +23,6 @@ const PropertyDetails = () => {
     
   return (
       <div className='property-details--main'>
-          <h2>Property Details</h2>
             {isLoading ? <img src={loading} alt='Loading...' />
                 : error ? <h2>{error}</h2>
                   : <>
@@ -42,8 +41,8 @@ const PropertyDetails = () => {
                       <p>{rental.description}</p>
                       <div>
                                   {favoritesChecker(rental.id) ? 
-                                          <button onClick={() => removeFromFavorites(rental.id)}>Remove From Favorites</button>
-                                          : <button onClick={() => addToFavorites(rental)}>Add to Favorites</button>
+                                          <button className='button' onClick={() => removeFromFavorites(rental.id)}>Remove From Favorites</button>
+                                          : <button className='button' onClick={() => addToFavorites(rental)}>Add to Favorites</button>
                                   
                                 }
                                       

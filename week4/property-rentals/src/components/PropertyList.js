@@ -36,8 +36,7 @@ const PropertyList = () => {
 
     
   return (
-      <div>
-          <>
+      <div className='property-list-main'>
             {isLoading ? <img src={loading} alt='Loading...' />
                 : error ? <h2>{error}</h2>
                       :
@@ -46,8 +45,10 @@ const PropertyList = () => {
                               <>
                           <div className='outer-container'>
                               <div className="property-container" key={rental.id} style={{ backgroundImage: `url(${rental.image_url})` }}>
-                                      <div className='overlay' onClick={() => navigate(`/properties/${rental.id}`)}></div>
+                                          <div className='overlay' onClick={() => navigate(`/properties/${rental.id}`)}>
+                                              
                                   <h2 className='property-title'>{rental.name}</h2>
+                                      </div>
                                   
                                         </div>
                                       <div className='lower-div'>
@@ -60,19 +61,18 @@ const PropertyList = () => {
                                               <div className='nightly-price'>
                                                   <h4>&#x20AC;{rental.nightly_price} / night</h4>
                                                   </div>
-                                          </div>
                                       {favoritesChecker(rental.id) ? 
-                                          <button onClick={() => removeFromFavorites(rental.id)}>
+                                          <button className='button' onClick={() => removeFromFavorites(rental.id)}>
                                               Unlike
                                           </button>
-                                              : <button onClick={() => addToFavorites(rental)}>Like</button>
+                                              : <button className='button' onClick={() => addToFavorites(rental)}>Like</button>
                                           }
+                                          </div>
                           </div>
                                   </>
                           ))}
                           </div>
             }
-        </>
     </div>
   )
 }

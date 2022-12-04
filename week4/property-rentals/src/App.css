@@ -1,7 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/montserrat');
-* {
+body {
     margin: 0;
     padding: 0;
+    background: rgb(218, 222, 243)    !important;
+    z-index: -50;
 }
 
 
@@ -58,7 +60,7 @@ video {
     display: flex;
     width: 90%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .category-container {
@@ -66,27 +68,25 @@ video {
     background-position: center;
     background-size: cover;
     height: 300px;
-    margin: 5px;
+    margin: 25px;
     padding: 5px;
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-end;
     font-family: 'Montserrat', sans-serif;
+    border-radius: 20px;
 }
 
 .overlay {
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0, 0.1);
 }
 .overlay:hover {
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, 0.1);
-}
-
-.overlay:hover ~ .property-title {
+    background-color: rgb(0, 0, 0, 0.4);
     color: orange;
 }
 
@@ -94,6 +94,7 @@ video {
 .category-title {
     color: white;
     position: absolute;
+    font-size: 2vw;
 }
 
 span p {
@@ -132,7 +133,9 @@ span p {
 }
 
 .property-title {
-    position: absolute;
+    text-align: center;
+    position: relative;
+    top: 50%;
 }
 
 .lower-div {
@@ -159,7 +162,7 @@ span p {
 }
 
 .property-details--outer-container {
-    background-color: #ffffff;
+    background-color: rgb(218, 222, 243);
     margin: 10px;
     display: flex;
     justify-content: center;
@@ -168,10 +171,88 @@ span p {
 
 .property-details-lower-div {
     margin: 20px;
-    padding: 20px;
+    padding: 20px 100px;
 }
 
 .about {
     padding: 30px;
     margin: 30px;
+}
+
+.property-list-main, .property-details--main {
+    height: 70vh;
+    overflow: scroll;
+}
+
+.no-favorites {
+    position: absolute;
+    top: 50%;
+}
+
+
+.button {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  width: 20%;
+  margin-left: 33%;
+}
+
+
+
+.button:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem .5rem rgba(239, 71, 101, 0.5), .125rem .125rem .5rem rgba(255, 154, 90, 0.5);
+}
+
+.mt-5 {
+    width: 50vw !important;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .categories-container{
+        flex-direction: column;
+        width: 40vw;
+    }
+    .category-container {
+        flex: none;
+        width: 100%;
+    }
+    video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    }
+    .ceZzBn {
+        display: none;
+    }
+    .category-title{
+        font-size: 3vw;
+    }
+    .property-list-main, .property-details--main {
+        height: auto;
+    }
+    .button {
+        margin: 0;
+        width: auto;
+    }
 }

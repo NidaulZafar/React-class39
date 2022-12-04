@@ -7,7 +7,7 @@ import About from './pages/About';
 import Favorites from './pages/Favorites';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 import PropertyDetails from './components/PropertyDetails';
 import PropertyList from './components/PropertyList';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -28,7 +28,7 @@ return (
 			<Route path='/contact' element={<Contact />} />
 			<Route path='*' element={<NotFound />} />
 		</Routes>
-		{/* <Footer /> */}
+		<Footer />
 	</Router>
 );
 }

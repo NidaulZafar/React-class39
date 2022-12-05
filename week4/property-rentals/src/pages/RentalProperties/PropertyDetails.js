@@ -21,37 +21,37 @@ const PropertyDetails = () => {
     }
 
     
-  return (
-      <div className='property-details--main'>
-            {isLoading ? <img src={loading} alt='Loading...' />
-                : error ? <h2>{error}</h2>
-                  : <>
-                  <div className='property-details--outer-container'>
-                      <div className='property-details-container' style={{ backgroundImage: `url(${rental.image_url})` }}>
-                      </div>
-                      <div className="property-details">
-                      <h2>{rental.name}</h2>
-                      <h4>&#x20AC;{rental.nightly_price} / night</h4>
-                      <h3>Max Guests</h3>
-                          <h4>{rental.maxGuests}</h4>
-                          </div>
-                          </div>
-                      <div className="property-details-lower-div">
-                      <h3>Description</h3>
-                      <p>{rental.description}</p>
-                      <div>
-                                  {favoritesChecker(rental.id) ? 
-                                          <button className='button' onClick={() => removeFromFavorites(rental.id)}>Remove From Favorites</button>
-                                          : <button className='button' onClick={() => addToFavorites(rental)}>Add to Favorites</button>
-                                  
-                                }
-                                      
-                          </div>
-                      </div>
-                      </>
+    return (
+        <div className='property-details--main'>
+            {isLoading ? <img src={loading} alt='Loading...' /> : error ?
+                <h2>{error}</h2>
+                :
+                <>
+                    <div className='property-details--outer-container'>
+                        <div className='property-details-container' style={{ backgroundImage: `url(${rental.image_url})` }}>
+                        </div>
+                        <div className="property-details">
+                            <h2>{rental.name}</h2>
+                            <h4>&#x20AC;{rental.nightly_price} / night</h4>
+                            <h3>Max Guests</h3>
+                            <h4>{rental.maxGuests}</h4>
+                        </div>
+                    </div>
+                    <div className="property-details-lower-div">
+                        <h3>Description</h3>
+                        <p>{rental.description}</p>
+                        <div>
+                            {favoritesChecker(rental.id) ? 
+                                <button className='button' onClick={() => removeFromFavorites(rental.id)}>Remove From Favorites</button>
+                                :
+                                <button className='button' onClick={() => addToFavorites(rental)}>Add to Favorites</button>
+                            }
+                        </div>
+                    </div>
+                </>
             }
-      </div>
-  )
+        </div>
+    )
 }
 
 export default PropertyDetails;

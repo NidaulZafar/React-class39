@@ -32,7 +32,7 @@ const Categories = () => {
             {categories.map((category) => (
                 <div key={category.id} className='category-container' style={{ backgroundImage: `url(${category.image_url})` }}>
                     <h2 className='category-title'>{category.suite}</h2>
-                    		<div className='overlay' onClick={() => {navigate(`/categories/${category.id}`)}}></div>
+                    <div className='overlay' onClick={() => {navigate(`/categories/${category.id}`)}}></div>
                 </div>
             ))}
         </div>

@@ -8,8 +8,8 @@ import Favorites from './pages/Favorites';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer/Footer';
-import PropertyDetails from './components/RentalProperties/PropertyDetails';
-import PropertyList from './components/RentalProperties/PropertyList';
+import PropertyDetails from './pages/RentalProperties/PropertyDetails';
+import PropertyList from './pages/RentalProperties/PropertyList';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 

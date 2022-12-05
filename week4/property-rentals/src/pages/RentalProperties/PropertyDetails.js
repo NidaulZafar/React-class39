@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { useParams } from 'react-router-dom';
-import useFetch from '../Hooks/useFetch';
+import useFetch from '../../components/Hooks/useFetch';
 import loading from '../../assets/loading.svg';
-import { useAppContext } from '../Hooks/useAppContext';
+import { useAppContext } from '../../components/Hooks/useAppContext';
 
 
 
@@ -10,8 +10,8 @@ const PropertyDetails = () => {
     const [rental, setRental] = useState({});
     const { id } = useParams();
 
-    const bookURL = `https://example-data.draftbit.com/properties/${id}`;
-    const { error, isLoading } = useFetch(bookURL, setRental);
+    const URL = `https://example-data.draftbit.com/properties/${id}`;
+    const { error, isLoading } = useFetch(URL, setRental);
 
     const { favorites, addToFavorites, removeFromFavorites } = useAppContext();
 

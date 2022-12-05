@@ -1,6 +1,6 @@
 import React from 'react';
 import background from '../assets/background.mp4'
-import Categories from './RentalProperties/Categories';
+import Categories from '../components/Categories';
 
 
 

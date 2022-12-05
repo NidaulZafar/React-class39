@@ -18,6 +18,7 @@ const Rental = ({property}) => {
         const boolean = favorites.some(rental => rental.id === id);
         return boolean;
     }
+    
     return (
         <div className='outer-container'>
             <div className="property-container" key={id} style={{ backgroundImage: `url(${image_url})` }}>

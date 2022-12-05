@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import useFetch from './Hooks/useFetch';
-import loading from '../assets/loading.svg';
-import { useAppContext } from './Hooks/useAppContext';
+import useFetch from '../Hooks/useFetch';
+import loading from '../../assets/loading.svg';
+import { useAppContext } from '../Hooks/useAppContext';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

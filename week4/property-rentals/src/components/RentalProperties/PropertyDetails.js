@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { useParams } from 'react-router-dom';
-import useFetch from './Hooks/useFetch';
-import loading from '../assets/loading.svg';
-import { useAppContext } from './Hooks/useAppContext';
+import useFetch from '../Hooks/useFetch';
+import loading from '../../assets/loading.svg';
+import { useAppContext } from '../Hooks/useAppContext';
 
 
 

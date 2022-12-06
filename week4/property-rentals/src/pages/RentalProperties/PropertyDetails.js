@@ -9,8 +9,12 @@ import { useAppContext } from '../../components/Hooks/useAppContext';
 const PropertyDetails = () => {
     const [rental, setRental] = useState({});
     const { id } = useParams();
+    if (!id) {
+        console.log(1235)
 
+    }
     const URL = `https://example-data.draftbit.com/properties/${id}`;
+
     const { error, isLoading } = useFetch(URL, setRental);
 
     const { favorites, addToFavorites, removeFromFavorites } = useAppContext();

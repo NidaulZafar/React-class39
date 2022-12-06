@@ -21,7 +21,7 @@ const Rental = ({property}) => {
     
     return (
         <div className='outer-container'>
-            <div className="property-container" key={id} style={{ backgroundImage: `url(${image_url})` }}>
+            <div className="property-container" style={{ backgroundImage: `url(${image_url})` }}>
                 <div className='overlay' onClick={() => navigate(`/properties/${id}`)}>
                     <h2 className='property-title'>{name}</h2>
                 </div>
